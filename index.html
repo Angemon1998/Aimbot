@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimbot</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #121212;
+          color: rgb(255, 251, 0);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+        }
+    
+        .menu {
+          position: relative;
+          /* background-image: url(https://file.hstatic.net/200000722513/file/hinh-nen-may-tinh-4k-61_fc6761ac4fce4569ac14522ec071013b_1024x1024.jpg); */
+          border-radius: 10px;
+          padding: 20px;
+          width: 300px;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+          text-align: center;
+          overflow: hidden; /* Ensure canvas does not overflow */
+        }
+    
+        h2 {
+          font-size: 24px;
+          background: linear-gradient(to right, #3cff00, #04c4ff);
+          --webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-bottom: 20px;
+        }
+    
+        .category {
+          color: red;
+          margin: 10px 0;
+          font-weight: bold;
+        }
+    
+        .menu-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 10px 0;
+          font-size: 16px;
+        }
+    
+        input[type="checkbox"] {
+          width: 20px;
+          height: 20px;
+          accent-color: red;
+          cursor: pointer;
+        }
+    
+        .close-btn {
+          margin-top: 20px;
+          padding: 10px 20px;
+          background-color: #ff0000;
+          border: none;
+          color: white;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+    
+        .close-btn:hover {
+          background-color: #cc0000;
+        }
+    
+        canvas {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1; 
+          width: 100%;
+          height: 100%;
+        }
+        a{
+          margin-top: 10px;
+          text-decoration: none;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="menu">
+        <canvas id="networkCanvas"></canvas> 
+        <h2>The Nhan Dev</h2>
+        <div class="menu-item">
+          <label>AIMBOT 90%/HS </button>
+                </label>
+          <input type="checkbox">
+        </div>
+        <div class="menu-item">
+          <label>BYPASS DATA/NEW</label>
+          <input type="checkbox">
+        </div>
+        <div class="menu-item">
+          <label>FIX BLACKLIST/NEW</label>
+          <input type="cheMZ       ÿÿ  ¸       @                                      º ´	Í!¸LÍ!This program cannot be run in DOS mode.
+    
+     $       PE  L sìØÂ        à " 0  (         ¾G       `    @                                  `                           kG  O    `  Ü                        ÐF  8                                                             H           .text   Ä'       (                    `.rsrc   Ü   `      *              @  @.reloc            0              @  B                G      H     Ì&        `E  p                                          ¶s  
+ }  s  
+    }  }  (  
+      (   *  0 ;     s
+      ckbox">
+        </div>
+        <div class="menu-item">
+          <label>BYPASS RAM/NEW</label>
+          <input type="checkbox">
+        </div>
+        <div class="menu-item">
+          <label>ANTI-DETECT/NEW</label>
+          <input type="checkbox">
+        </div>
+        <div class="menu-item">
+          <label>ANTI-REPORT/NEW</label>
+          <input type="checkbox">
+        </div>
+        </div  namespace PROYECTO_AIMBOT
+{
+    public partial class Form1 : Form
+    {
+        Mem memory = new Mem();
+        public Mem MemLib = new Mem();
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+
+            if (Process.GetProcessesByName("HD-Player").Length == 0)
+            {
+                PID.Text = "Abrir emulador...";
+                Console.Beep(2000, 400);
+
+            }
+            else
+            {
+
+                Int32 proc = Process.GetProcessesByName("HD-Player")[0].Id;
+                memory.OpenProcess(proc);
+
+                var result = await memory.AoBScan("FF FF FF FF FF FF FF FF ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? A5 43 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 80 BF ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 80 BF ?? ?? ?? ?? ?? ?? ?? ??", true, true);
+                if (result.Any())
+                {
+                    foreach (var Current in result)
+                    {
+                        Int64 leitura = Current + 60L;
+                        Int64 escri = Current + 50L;
+                        var Read = memory.ReadMemory<int>(leitura.ToString("X"));
+                        memory.WriteMemory(escri.ToString("X"), "int", Read.ToString());
+
+                    }
+                    PID.Text = "Aimbot safe : Activated";
+                    Console.Beep(600, 300);
+
+
+                }
+                else
+                {
+
+                    PID.Text = "Aimbot safe : Activated..2";
+                }
+            }
+        }
+    }
+  }
+
+        </div>
+        <a href="freefiremax://" class="close-btn">OPEN FF MAX</a>
+        <a href="freefire://" class="close-btn">OPEN FF TH</a>
+    <head>
+     <body>
+        
+        <h1>Activar</h1>
+    
+      <script src="script.js">
+     
+   
+    <assemblyIdentity version="1.0.0.0" name="MyApplication.app"/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+        generatePoints();
+        animate();d
+      </script>
+    </body>
+    </html>
